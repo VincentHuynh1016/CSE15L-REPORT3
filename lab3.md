@@ -74,6 +74,44 @@ $ wc biomed-sizes.txt
 ```
 It looks like the `grep -r` command searches for the specified pattern ("base pair") in all files within the given directory and its subdirectories. The `grep -r` command is important because it allows you to perform a recursive search for specific text patterns within files and directories. 
 
+#### grep -l:
+
+```
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ grep -l "base pair" technical/plos/* > plos-sizes.txt
+
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ wc -l plos-sizes.txt
+2 plos-sizes.txt
+```
+```
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ grep -l "base pair" technical/biomed/* > biomed-sizes.txt
+
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ wc -l biomed-sizes.txt
+74 biomed-sizes.txt
+```
+It looks like the `grep -l` is used to print only the names of files that contain the specified text pattern ("base pair"). This is important because it changes the behavior of grep to only list the names of files that contain the specified text pattern, without showing the actual matching lines.
+
+#### grep -rv:
+```
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ grep -rv "base pair" technical/plos/ > plos-sizes.txt
+
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ wc plos-sizes.txt
+  38078  446279 4352999 plos-sizes.txt
+```
+```
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ grep -rv "base pair" technical/biomed/ > biomed-sizes.txt
+
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ wc biomed-sizes.txt
+  490447  3925577 44062361 biomed-sizes.txt
+```
+It looks like the `-r` option tells grep to perform a recursive search, and the `-v` option inverts the match, meaning it will display lines that do not contain the text "base pair." This is important for conducting a recursive search within directories and their subdirectories to find files that do not contain a specific text pattern. 
 
 
 
