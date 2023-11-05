@@ -52,6 +52,28 @@
 
 It looks like the values in the new reversed array are not being updated correctly. In order to fix this issue, we should update the newArray and not the original. And also return the newArray
 
+# Part 2 (Researching Commands):
+
+#### grep -r:
+
+```
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ grep -r "base pair" technical/plos/ > plos-sizes.txt
+
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ wc plos-sizes.txt
+  3  48 412 plos-sizes.txt
+```
+```
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ grep -r "base pair" technical/biomed/ > biomed-sizes.txt
+
+vince@DESKTOP-Q15CO19 MINGW64 ~/OneDrive/Documents/GitHub/docsearch (main)
+$ wc biomed-sizes.txt
+  226  2326 22534 biomed-sizes.txt
+```
+It looks like the `grep -r` command searches for the specified pattern ("base pair") in all files within the given directory and its subdirectories. The `grep -r` command is important because it allows you to perform a recursive search for specific text patterns within files and directories. 
+
 
 
 
