@@ -209,6 +209,11 @@ technical/biomed/rr196.txt
 ```
 It looks like the `grep -rl` command performs a recursive search within the directory and its subdirectories for files that contain the text "base pair." The -r option enables recursive search, and the -l option instructs grep to list only the names of files containing the specified pattern. This is important because it is a valuable tool for conducting efficient and recursive searches within directories and subdirectories to identify and list files that contain a specific text pattern.
 
+# Cite my Sources:
 
+#### https://en.wikibooks.org/wiki/Grep
+
+#### Citation:
+projects, Contributors to Wikimedia. “GREP.” Wikibooks, Open Books for an Open World, Wikimedia Foundation, Inc., 4 Sept. 2022, en.wikibooks.org/wiki/Grep. 
 
 
